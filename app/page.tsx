@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Background from "./components/Background";
 import { getAllPosts } from "@/lib/blog";
+import Image from "next/image";
 
 export default async function Home() {
   const posts = await getAllPosts();
@@ -29,6 +30,25 @@ export default async function Home() {
       </header>
 
       <main className="max-w-4xl mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <section className="relative h-[400px] mb-16 rounded-lg overflow-hidden">
+          <Image
+            src="/assets/images/blogHero.png"
+            alt="Blog Hero"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent flex items-end">
+            <div className="p-8">
+              <h2 className="text-4xl font-bold text-white mb-4">Welcome to My Blog</h2>
+              <p className="text-gray-200 text-lg max-w-2xl">
+                Exploring ideas, sharing knowledge, and documenting my journey in technology and development.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-gray-100 mb-6">Latest Posts</h2>
           <div className="grid gap-8">

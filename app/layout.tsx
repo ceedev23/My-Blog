@@ -12,6 +12,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "My Blog",
   description: "A collection of all my thoughts and ideas",
+  icons: {
+    icon: "/assets/images/favicon.svg",
+  },
 };
 
 export default function RootLayout({
