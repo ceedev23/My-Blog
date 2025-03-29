@@ -84,8 +84,8 @@ export default async function Home() {
           <h2 className="text-3xl font-bold text-gray-100 mb-6">About Me</h2>
           <div className="bg-gray-900/80 backdrop-blur-sm p-6 rounded-lg border border-gray-800/50 shadow-sm">
             <p className="text-gray-400">
-              Welcome to my blog! I'm passionate about sharing my thoughts and experiences on various topics.
-              Here you'll find articles about technology, personal development, and more.
+              Welcome to my blog! I&apos;m passionate about sharing my thoughts and experiences on various topics.
+              Here you&apos;ll find articles about technology, personal development, and more.
             </p>
           </div>
         </section>

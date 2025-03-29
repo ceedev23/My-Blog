@@ -18,9 +18,8 @@ export interface BlogPost {
 
 export async function getAllPosts(): Promise<BlogPost[]> {
   const fileNames = fs.readdirSync(postsDirectory);
-  const allPostsData = fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map((fileName) => {
+  const allPostsData = await Promise.all(
+    fileNames.map(async (fileName) => {
       const slug = fileName.replace(/\.md$/, '');
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, 'utf8');
@@ -34,7 +33,8 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         excerpt: data.excerpt,
         content,
       };
-    });
+    })
+  );
 
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
@@ -53,7 +53,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       excerpt: data.excerpt,
       content,
     };
-  } catch (error) {
+  } catch {
     return null;
   }
 }
