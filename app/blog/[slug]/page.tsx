@@ -2,11 +2,14 @@ import { getPostBySlug, formatDate } from "@/lib/blog";
 import { notFound } from "next/navigation";
 import BlogPostClient from "./BlogPostClient";
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+type PageProps = {
+  params: {
+    slug: string;
+  };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export default async function BlogPostPage({ params }: PageProps) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {
