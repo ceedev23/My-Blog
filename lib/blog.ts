@@ -17,6 +17,12 @@ export interface BlogPost {
   content: string;
 }
 
+// Configure marked to handle markdown properly
+marked.setOptions({
+  gfm: true,
+  breaks: true,
+});
+
 export async function getAllPosts(): Promise<BlogPost[]> {
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = await Promise.all(
@@ -32,7 +38,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         date: data.date,
         readingTime: data.readingTime,
         excerpt: data.excerpt,
-        content: await marked(content),
+        content: marked.parse(content) as string,
       };
     })
   );
@@ -52,7 +58,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       date: data.date,
       readingTime: data.readingTime,
       excerpt: data.excerpt,
-      content: await marked(content),
+      content: marked.parse(content) as string,
     };
   } catch {
     return null;
