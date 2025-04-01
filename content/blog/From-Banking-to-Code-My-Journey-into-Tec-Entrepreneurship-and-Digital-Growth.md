@@ -5,8 +5,6 @@ readingTime: "5 min read"
 excerpt: "A personal journey from banking to tech entrepreneurship, sharing experiences in web development, mobile app creation, and digital business growth."
 ---
 
-# From Banking to Coding: My Journey into Tech Entrepreneurship and Digital Growth
-
 The journey of a developer and entrepreneur is never a straight path—it's a series of ideas, challenges, and breakthroughs. As I reflect on my progress so far, I see a combination of passion for technology and a desire to create impact.
 
 ## Getting Started with Web Development
