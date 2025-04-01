@@ -9,10 +9,11 @@ A personal blog built with Next.js, TypeScript, and Tailwind CSS.
 - MDX blog posts
 - Beautiful typography
 - Glass-morphism effects
+- SEO optimized
 
 ## Tech Stack
 
-- Next.js 15
+- Next.js 14
 - TypeScript
 - Tailwind CSS
 - MDX
@@ -23,6 +24,7 @@ A personal blog built with Next.js, TypeScript, and Tailwind CSS.
 1. Clone the repository:
 ```bash
 git clone https://github.com/ceedev23/My-Blog.git
+cd My-Blog
 ```
 
 2. Install dependencies:
@@ -36,6 +38,17 @@ npm run dev
 ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+My-Blog/
+├── app/              # Next.js app directory
+├── content/          # Blog posts and content
+├── lib/             # Utility functions
+├── public/          # Static assets
+└── components/      # React components
+```
 
 ## License
 
