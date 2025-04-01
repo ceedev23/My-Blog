@@ -59,7 +59,7 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <article className="prose prose-invert max-w-none bg-gray-900/80 backdrop-blur-sm p-8 rounded-lg border border-gray-800/50 shadow-sm">
           <div 
-            className="prose prose-invert max-w-none text-gray-400 
+            className="prose prose-invert max-w-none
               [&>p]:text-gray-400 [&>p]:mb-6 [&>p]:leading-relaxed
               [&>h1]:text-white [&>h1]:text-4xl [&>h1]:font-bold [&>h1]:mb-6 [&>h1]:mt-8
               [&>h2]:text-gray-400 [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mb-4 [&>h2]:mt-8
