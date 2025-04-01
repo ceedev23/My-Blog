@@ -32,7 +32,7 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
                 </svg>
                 Back to Home
               </Link>
-              <h1 className="text-4xl font-bold text-gray-100">
+              <h1 className="text-4xl font-bold text-white">
                 {post.title}
               </h1>
               <div className="mt-4 flex items-center text-sm text-gray-400">
@@ -59,7 +59,20 @@ export default function BlogPostClient({ post }: BlogPostClientProps) {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <article className="prose prose-invert max-w-none bg-gray-900/80 backdrop-blur-sm p-8 rounded-lg border border-gray-800/50 shadow-sm">
           <div 
-            className="text-gray-400"
+            className="prose prose-invert max-w-none text-gray-400 
+              [&>p]:text-gray-400 [&>p]:mb-6 [&>p]:leading-relaxed
+              [&>h1]:text-white [&>h1]:text-4xl [&>h1]:font-bold [&>h1]:mb-6 [&>h1]:mt-8
+              [&>h2]:text-gray-400 [&>h2]:text-3xl [&>h2]:font-bold [&>h2]:mb-4 [&>h2]:mt-8
+              [&>h3]:text-gray-400 [&>h3]:text-2xl [&>h3]:font-bold [&>h3]:mb-4 [&>h3]:mt-6
+              [&>h4]:text-gray-400 [&>h4]:text-xl [&>h4]:font-bold [&>h4]:mb-4 [&>h4]:mt-6
+              [&>strong]:text-gray-400 [&>strong]:font-semibold
+              [&>code]:text-gray-400 [&>code]:bg-gray-800/50 [&>code]:px-1 [&>code]:py-0.5 [&>code]:rounded
+              [&>pre]:text-gray-400 [&>pre]:bg-gray-800/50 [&>pre]:p-4 [&>pre]:rounded-lg [&>pre]:mb-6
+              [&>ul]:text-gray-400 [&>ul]:list-disc [&>ul]:pl-6 [&>ul]:mb-6
+              [&>ol]:text-gray-400 [&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:mb-6
+              [&>li]:text-gray-400 [&>li]:mb-2
+              [&>blockquote]:text-gray-400 [&>blockquote]:border-l-4 [&>blockquote]:border-gray-700 [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:my-6
+              [&>blockquote>p]:text-gray-400 [&>blockquote>p]:mb-0"
             dangerouslySetInnerHTML={{ __html: post.content }} 
           />
         </article>

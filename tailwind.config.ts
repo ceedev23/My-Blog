@@ -14,36 +14,36 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
-            color: "#e5e7eb",
+            color: "#ffffff",
             h1: {
-              color: "#f3f4f6",
+              color: "#ffffff",
             },
             h2: {
-              color: "#f3f4f6",
+              color: "#ffffff",
             },
             h3: {
-              color: "#f3f4f6",
+              color: "#ffffff",
             },
             h4: {
-              color: "#f3f4f6",
+              color: "#ffffff",
             },
             strong: {
-              color: "#f3f4f6",
+              color: "#ffffff",
             },
             code: {
-              color: "#e5e7eb",
+              color: "#ffffff",
             },
             pre: {
-              color: "#e5e7eb",
+              color: "#ffffff",
             },
             blockquote: {
-              color: "#d1d5db",
+              color: "#ffffff",
             },
             "blockquote p": {
-              color: "#d1d5db",
+              color: "#ffffff",
             },
             li: {
-              color: "#e5e7eb",
+              color: "#ffffff",
             },
             a: {
               color: "#60a5fa",
@@ -52,10 +52,10 @@ const config: Config = {
               },
             },
             th: {
-              color: "#f3f4f6",
+              color: "#ffffff",
             },
             td: {
-              color: "#e5e7eb",
+              color: "#ffffff",
             },
           },
         },

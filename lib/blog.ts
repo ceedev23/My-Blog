@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'path';
 import matter from 'gray-matter';
 import { format } from 'date-fns';
+import { marked } from 'marked';
 
 const postsDirectory = path.join(process.cwd(), 'content/blog');
 
@@ -31,7 +32,7 @@ export async function getAllPosts(): Promise<BlogPost[]> {
         date: data.date,
         readingTime: data.readingTime,
         excerpt: data.excerpt,
-        content,
+        content: await marked(content),
       };
     })
   );
@@ -51,7 +52,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       date: data.date,
       readingTime: data.readingTime,
       excerpt: data.excerpt,
-      content,
+      content: await marked(content),
     };
   } catch {
     return null;
